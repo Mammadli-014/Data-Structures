@@ -4,6 +4,6 @@ project(LinkedList C)
 set(CMAKE_C_STANDARD 11)
 
 add_library(LinkedList STATIC linkedList/SinglyLinkedList.c
-        linkedList/CircularLinkedList.c
+        linkedList/CircularDoublyLinkedList.c
         linkedList/DoublyLinkedLists.c
-        linkedList/CircularDoublyLinkedList.c)
+        linkedList/CircularLinkedList.c)

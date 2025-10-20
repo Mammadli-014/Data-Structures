@@ -1,138 +1,133 @@
 #include <stdio.h>
-#include <malloc.h>
+#include <stdlib.h>
 
-typedef struct Node{
-    struct Node* pre;
-    int value;
-    struct Node* next;
-
-}Node;
+typedef struct Node {
+    int  id;
+    struct Node *next;
+} Node;
 
 
-Node* createStruct(int value){
-    Node* new= (Node*) malloc(sizeof (Node));
-    new->pre=NULL;
-    new->next=NULL;
-    new->value=value;
-    return new;
+Node* create_node(int id) {
+    Node *n = (Node*)malloc(sizeof(Node));
+    n->id = id;
+    n->next = NULL;
+    return n;
 }
 
-Node* add_end(Node* head,Node* str){
-    if (head == NULL) {
-        str->next = str;
-        str->pre = str;
-        return str;
+Node* prepend(Node *head , Node *value) {
+    if(head == NULL){
+        value->next=value;
+        return value;
     }
-
-    Node* tail=head->pre;
-
-    tail->next=str;
-    str->pre=tail;
-
-    str->next=head;
-    head->pre=str;
-
-    return head;
-
-}
-
-Node* add_beg(Node* head,Node* str){
-    if (head == NULL) {
-        str->next = str;
-        str->pre = str;
-        return str;
-    }
-
-    head->pre->next=str;
-    str->pre=head->pre;
-    str->next=head;
-    head->pre=str;
-
-    return str;
-}
-
-Node* del_beg(Node* head){
-    if (head == NULL) return NULL;
-    if (head->next == head) {
-        free(head);
-        return NULL;
-    }
-    Node* tail=head->pre;
-    Node* newHead=head->next;
-
-    tail->next=head->next;
-    newHead->pre=tail;
-    free(head);
-    return newHead;
-}
-
-Node* del_end(Node* head){
-    if (head == NULL) return NULL;
-    if (head->next == head) {
-        free(head);
-        return NULL;
-    }
-
-    Node* tail=head->pre;
-    Node* newTail=tail->pre;
-
-    newTail->next=head;
-    head->pre=newTail;
-
-    free(tail);
-
-    return head;
-
-}
-
-void printList(Node* head){
-    if(head == NULL) {
-        printf("List is empty.\n");
-        return;
-    }
-    Node*temp=head;
-    int i=1;
-    do {
-        printf("%d)value:%d\n",i,temp->value);
-        temp=temp->next;
-        i++;
-    }while(temp != head);
-}
-
-void freeList(Node* head){
-    if (head == NULL) return;
 
     Node* temp=head;
-    do{
-        Node* next=temp->next;
-        free(temp);
-        temp=next;
-    }while(temp!=head);
-
+    while(temp->next != head){
+        temp=temp->next;
+    }
+    temp->next=value;
+    value->next = head;
+    return value;
 }
 
-int main() {
-    Node* head = NULL;
+Node* append(Node *head , Node* value) {
+    if(head == NULL){
+        value->next=value;
+        return value;
+    }
+    Node* temp=head;
+    while(temp->next != head){
+        temp=temp->next;
+    }
+    temp->next=value;
+    value->next=head;
+    return head;
+}
 
-    Node* n1 = malloc(sizeof(Node)); n1->value = 10;
-    Node* n2 = malloc(sizeof(Node)); n2->value = 20;
-    Node* n3 = malloc(sizeof(Node)); n3->value = 30;
+Node* get(Node* head,int index){
+    int i=0;
+    Node* temp=head;
+    do {
+        if (i == index) return temp;
+        temp = temp->next;
+        i++;
+    } while (temp != head);
+    return NULL;
+}
 
-    head = add_beg(head, n1);
-    head = add_end(head, n2);
-    head = add_end(head, n3);
+int size(Node* head){
+    int i=0;
+    Node* temp=head;
+    do{
+        i+=1;
+        temp=temp->next;
 
-    printf("List after additions:\n");
-    printList(head);
+    }while(temp!=head);
+    return i;
+}
 
-    head = del_beg(head);
-    printf("After deleting first:\n");
-    printList(head);
+Node* delete_by_id(Node *head,int id){
+    Node* temp=head;
+    Node* pre;
 
-    head = del_end(head);
-    printf("After deleting last:\n");
-    printList(head);
+    if(head ==NULL) return NULL;
 
-    freeList(head);
+    if (head->id == id && head->next == head) {
+        free(head);
+        return NULL;
+    }
+
+    if (head->id == id) {
+        Node *tail = head;
+        while (tail->next != head) tail = tail->next;
+        tail->next = head->next;
+        temp = head->next;
+        free(head);
+        return temp;
+    }
+
+    do{
+        if(id == temp->id){
+            pre->next=temp->next;
+            free(temp);
+            return head;
+        }
+        pre=temp;
+        temp=temp->next;
+
+    }while(temp!=head);
+    return head;
+}
+
+Node* delete_begining(Node *head) {
+    if (head == NULL) return NULL;
+
+    Node *old = head;
+    Node* temp=head;
+    while(temp->next != head){
+        temp=temp->next;
+    }
+    head = old->next;
+    temp->next=head;
+
+    free(old);
+    return head;
+}
+
+int contains(Node* head, int id){
+    Node* temp=head;
+   do{
+        if(temp->id == id) return 1;
+        temp=temp->next;
+    } while(temp!=head);
     return 0;
+}
+
+void print_list(Node *head) {
+    if (head == NULL) { puts("(empty)"); return; }
+    int i = 1;
+    Node * temp=head;
+    do{
+        printf("%d) %d\n", i , temp->id);
+        temp = temp->next; i++;
+    }while (temp !=head);
 }
