@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
 typedef struct Node {
     int  id;
@@ -47,7 +46,6 @@ Node* prepend(Node *head , int id) {
     return n;
 }
 
-
 Node* append(Node *head , int id) {
     Node *n = create_node(id);
     if (head == NULL) return n;
@@ -56,7 +54,6 @@ Node* append(Node *head , int id) {
     cur->next = n;
     return head;
 }
-
 
 Node* get(Node* head,int index){
     int i=0;
@@ -107,7 +104,6 @@ Node* delete_by_id(Node *head,int id){
     free(temp);
     return head;
 }
-
 
 Node* delete_begining(Node *head) {
     if (head == NULL) return NULL;

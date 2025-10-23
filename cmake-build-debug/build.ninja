@@ -55,8 +55,8 @@ build CMakeFiles/LinkedList.dir/linkedList/SinglyLinkedList.c.obj: C_COMPILER__L
   OBJECT_DIR = CMakeFiles\LinkedList.dir
   OBJECT_FILE_DIR = CMakeFiles\LinkedList.dir\linkedList
 
-build CMakeFiles/LinkedList.dir/linkedList/CircularLinkedList.c.obj: C_COMPILER__LinkedList_unscanned_Debug C$:/Users/user/CLionProjects/DataStructures/linkedList/CircularLinkedList.c || cmake_object_order_depends_target_LinkedList
-  DEP_FILE = CMakeFiles\LinkedList.dir\linkedList\CircularLinkedList.c.obj.d
+build CMakeFiles/LinkedList.dir/linkedList/CircularDoublyLinkedList.c.obj: C_COMPILER__LinkedList_unscanned_Debug C$:/Users/user/CLionProjects/DataStructures/linkedList/CircularDoublyLinkedList.c || cmake_object_order_depends_target_LinkedList
+  DEP_FILE = CMakeFiles\LinkedList.dir\linkedList\CircularDoublyLinkedList.c.obj.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\LinkedList.dir
   OBJECT_FILE_DIR = CMakeFiles\LinkedList.dir\linkedList
@@ -67,8 +67,8 @@ build CMakeFiles/LinkedList.dir/linkedList/DoublyLinkedLists.c.obj: C_COMPILER__
   OBJECT_DIR = CMakeFiles\LinkedList.dir
   OBJECT_FILE_DIR = CMakeFiles\LinkedList.dir\linkedList
 
-build CMakeFiles/LinkedList.dir/linkedList/CircularDoublyLinkedList.c.obj: C_COMPILER__LinkedList_unscanned_Debug C$:/Users/user/CLionProjects/DataStructures/linkedList/CircularDoublyLinkedList.c || cmake_object_order_depends_target_LinkedList
-  DEP_FILE = CMakeFiles\LinkedList.dir\linkedList\CircularDoublyLinkedList.c.obj.d
+build CMakeFiles/LinkedList.dir/linkedList/CircularLinkedList.c.obj: C_COMPILER__LinkedList_unscanned_Debug C$:/Users/user/CLionProjects/DataStructures/linkedList/CircularLinkedList.c || cmake_object_order_depends_target_LinkedList
+  DEP_FILE = CMakeFiles\LinkedList.dir\linkedList\CircularLinkedList.c.obj.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\LinkedList.dir
   OBJECT_FILE_DIR = CMakeFiles\LinkedList.dir\linkedList
@@ -81,7 +81,7 @@ build CMakeFiles/LinkedList.dir/linkedList/CircularDoublyLinkedList.c.obj: C_COM
 #############################################
 # Link the static library libLinkedList.a
 
-build libLinkedList.a: C_STATIC_LIBRARY_LINKER__LinkedList_Debug CMakeFiles/LinkedList.dir/linkedList/SinglyLinkedList.c.obj CMakeFiles/LinkedList.dir/linkedList/CircularLinkedList.c.obj CMakeFiles/LinkedList.dir/linkedList/DoublyLinkedLists.c.obj CMakeFiles/LinkedList.dir/linkedList/CircularDoublyLinkedList.c.obj
+build libLinkedList.a: C_STATIC_LIBRARY_LINKER__LinkedList_Debug CMakeFiles/LinkedList.dir/linkedList/SinglyLinkedList.c.obj CMakeFiles/LinkedList.dir/linkedList/CircularDoublyLinkedList.c.obj CMakeFiles/LinkedList.dir/linkedList/DoublyLinkedLists.c.obj CMakeFiles/LinkedList.dir/linkedList/CircularLinkedList.c.obj
   LANGUAGE_COMPILE_FLAGS = -g
   OBJECT_DIR = CMakeFiles\LinkedList.dir
   POST_BUILD = cd .
