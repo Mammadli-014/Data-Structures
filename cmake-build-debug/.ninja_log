@@ -1,0 +1,6 @@
+# ninja log v5
+18	892	7825652606728045	CMakeFiles/LinkedList.dir/linkedList/CircularDoublyLinkedList.c.obj	8023881a7761e74b
+14	894	7825652606728045	CMakeFiles/LinkedList.dir/linkedList/DoublyLinkedLists.c.obj	270665fe60ab816f
+1	902	7825652606771703	CMakeFiles/LinkedList.dir/linkedList/SinglyLinkedList.c.obj	8472c63fbd8951b7
+1	105	7825652868962970	CMakeFiles/LinkedList.dir/linkedList/CircularLinkedList.c.obj	305cebaa27130926
+106	216	7825652870055133	libLinkedList.a	cdc6971911e16bde

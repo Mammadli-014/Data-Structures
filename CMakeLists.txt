@@ -6,4 +6,5 @@ set(CMAKE_C_STANDARD 11)
 add_library(LinkedList STATIC linkedList/SinglyLinkedList.c
         linkedList/CircularDoublyLinkedList.c
         linkedList/DoublyLinkedLists.c
-        linkedList/CircularLinkedList.c)
+        linkedList/CircularLinkedList.c
+        stack/Stack.c)
