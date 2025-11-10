@@ -9,4 +9,6 @@ add_library(LinkedList STATIC linkedList/SinglyLinkedList.c
         linkedList/CircularLinkedList.c
         stack/LinkedStack.c
         stack/Stack.c
-        queue/LinearQueue.c)
+        queue/LinearQueue.c
+        queue/LinkedQueue.c
+        queue/CircularQueue.c)

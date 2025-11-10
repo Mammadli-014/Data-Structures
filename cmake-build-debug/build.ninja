@@ -85,8 +85,20 @@ build CMakeFiles/LinkedList.dir/stack/Stack.c.obj: C_COMPILER__LinkedList_unscan
   OBJECT_DIR = CMakeFiles\LinkedList.dir
   OBJECT_FILE_DIR = CMakeFiles\LinkedList.dir\stack
 
-build CMakeFiles/LinkedList.dir/queue/Queue.c.obj: C_COMPILER__LinkedList_unscanned_Debug C$:/Users/user/CLionProjects/DataStructures/queue/Queue.c || cmake_object_order_depends_target_LinkedList
-  DEP_FILE = CMakeFiles\LinkedList.dir\queue\Queue.c.obj.d
+build CMakeFiles/LinkedList.dir/queue/LinearQueue.c.obj: C_COMPILER__LinkedList_unscanned_Debug C$:/Users/user/CLionProjects/DataStructures/queue/LinearQueue.c || cmake_object_order_depends_target_LinkedList
+  DEP_FILE = CMakeFiles\LinkedList.dir\queue\LinearQueue.c.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\LinkedList.dir
+  OBJECT_FILE_DIR = CMakeFiles\LinkedList.dir\queue
+
+build CMakeFiles/LinkedList.dir/queue/LinkedQueue.c.obj: C_COMPILER__LinkedList_unscanned_Debug C$:/Users/user/CLionProjects/DataStructures/queue/LinkedQueue.c || cmake_object_order_depends_target_LinkedList
+  DEP_FILE = CMakeFiles\LinkedList.dir\queue\LinkedQueue.c.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\LinkedList.dir
+  OBJECT_FILE_DIR = CMakeFiles\LinkedList.dir\queue
+
+build CMakeFiles/LinkedList.dir/queue/CircularQueue.c.obj: C_COMPILER__LinkedList_unscanned_Debug C$:/Users/user/CLionProjects/DataStructures/queue/CircularQueue.c || cmake_object_order_depends_target_LinkedList
+  DEP_FILE = CMakeFiles\LinkedList.dir\queue\CircularQueue.c.obj.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\LinkedList.dir
   OBJECT_FILE_DIR = CMakeFiles\LinkedList.dir\queue
@@ -99,7 +111,7 @@ build CMakeFiles/LinkedList.dir/queue/Queue.c.obj: C_COMPILER__LinkedList_unscan
 #############################################
 # Link the static library libLinkedList.a
 
-build libLinkedList.a: C_STATIC_LIBRARY_LINKER__LinkedList_Debug CMakeFiles/LinkedList.dir/linkedList/SinglyLinkedList.c.obj CMakeFiles/LinkedList.dir/linkedList/CircularDoublyLinkedList.c.obj CMakeFiles/LinkedList.dir/linkedList/DoublyLinkedLists.c.obj CMakeFiles/LinkedList.dir/linkedList/CircularLinkedList.c.obj CMakeFiles/LinkedList.dir/stack/LinkedStack.c.obj CMakeFiles/LinkedList.dir/stack/Stack.c.obj CMakeFiles/LinkedList.dir/queue/Queue.c.obj
+build libLinkedList.a: C_STATIC_LIBRARY_LINKER__LinkedList_Debug CMakeFiles/LinkedList.dir/linkedList/SinglyLinkedList.c.obj CMakeFiles/LinkedList.dir/linkedList/CircularDoublyLinkedList.c.obj CMakeFiles/LinkedList.dir/linkedList/DoublyLinkedLists.c.obj CMakeFiles/LinkedList.dir/linkedList/CircularLinkedList.c.obj CMakeFiles/LinkedList.dir/stack/LinkedStack.c.obj CMakeFiles/LinkedList.dir/stack/Stack.c.obj CMakeFiles/LinkedList.dir/queue/LinearQueue.c.obj CMakeFiles/LinkedList.dir/queue/LinkedQueue.c.obj CMakeFiles/LinkedList.dir/queue/CircularQueue.c.obj
   LANGUAGE_COMPILE_FLAGS = -g
   OBJECT_DIR = CMakeFiles\LinkedList.dir
   POST_BUILD = cd .
