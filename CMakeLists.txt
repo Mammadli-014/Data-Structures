@@ -13,4 +13,5 @@ add_library(LinkedList STATIC linkedList/SinglyLinkedList.c
         queue/LinkedQueue.c
         queue/CircularQueue.c
         tree/SequantialTree.c
-        tree/LinkedTree.c)
+        tree/LinkedTree.c
+        tree/RedBlackTree.c)
